@@ -21,3 +21,32 @@ jQuery-Lite's API is roughly split into five parts:
 
 DOM elements can be selected with the JQL Selector `$l()`. It can take arguments in string form or in HTMLElement form, and returns a `DOMNodeCollection` object.
 If it receives a string, it will return a `DOMNodeCollection` of every DOM element that matches the CSS selector corresponding to that string. If fed an HTMLElement, it will return a `DOMNodeCollection` containing only that element.
+
+Example:
+**HTML on page**
+```html
+  <body>
+    <article class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    <section class="content">
+      <ul>
+        <li id="lorem">Lorem</li>
+        <li>ipsum</li>
+        <li>dolor</li>
+        <li>sit</li>
+        <li>amet</li>
+      </ul>
+    </section>
+  </body>
+```
+
+**JQL Example**
+```javascript
+  $l("li") // => DOMNodeCollection with all five list items
+  $l(".content") // => DOMNodeCollection containing the article.content and section.content elements
+  $("#lorem") // => DOMNodeCollection containing just the first list item
+
+  // assume 'elem' is an HTMLElement representing <span>This is a span</span>
+  $(elem) // => DOMNodeCollection containing that single element
+```
