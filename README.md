@@ -60,11 +60,13 @@ These methods let one edit the HTML inside of selected elements.
 
 `.html(string)` acts as a setter method, setting the `innerHMTL` of each element of the selection to the inputted string.
 
+Both getter and setter functionalities return the original function.
+
 #### .empty()
-`.empty` removes all `innerHTML` from the selected elements, leaving a pair of empty tags.
+`.empty` removes all `innerHTML` from the selected elements, leaving a pair of empty tags. It returns the original selection, albeit without content.
 
 #### .append()
-Appends its arguments to its selection as child nodes.
+Appends its arguments to its selection as child nodes and returns the original selection.
 
 `.append(DOMNodeCollection)` will add every element in the argument to each element in the selection.
 
@@ -73,21 +75,21 @@ Appends its arguments to its selection as child nodes.
 `.append(string)` will add the passed in string to each element in the selection. If the string is valid HTML, it will show up in the DOM as such.
 
 #### .attr()
-Adds attributes onto selected elements.
+Adds attributes onto selected elements and returns the original selection.
 
 `.attr(attribute, value)` will (assuming both arguments are strings) assign the each element in the selection an `attribute` with the given `value`.
 
 `.attr(Object)` will assign many attributes to each element in the selection, with the keys being the attributes names and the values being the values.
 
 #### .addClass()
-Adds classes to the selected elements.
+Adds classes to the selected elements and returns the original selection.
 
 `.addClass(string)` adds the given string onto all of the selected elements' class lists.
 
 `.addClass(array)` adds all of the array's strings onto the selection's class lists.
 
 #### .removeClass()
-Removes classes from the selected elements.
+Removes classes from the selected elements and returns the original selection.
 
 `.removeClass(string)` takes the given string out of all the selected elements' class lists.
 
