@@ -28,7 +28,7 @@ Example:
 ```html
   <body>
     <article class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </article>
     <section class="content">
       <ul>
@@ -94,3 +94,35 @@ Removes classes from the selected elements and returns the original selection.
 `.removeClass(string)` takes the given string out of all the selected elements' class lists.
 
 `.removeClass(array)` removes all of the array's strings from the selection's class lists.
+
+### Traversal
+
+#### .children()
+`.children()` takes no arguments and returns a new DOMNodeCollection of the direct children of each element in the selection.
+
+Example:
+
+**HTML On Page:**
+
+```html
+  <div id="test">
+    <div id="a">
+      <p>Div A</p>
+    </div>
+    <div id="b">
+      <p>Div B</p>
+    </div>
+    <div id="c">
+      <p>Div C</p>
+    </div>
+  </div>
+```
+
+**JQL**
+```javascript
+  $l("#test").children() // => DOMNodeCollection containing the three divs with ids #a, #b, and #c
+
+  $l("#c").children() // => DOMNodeCollection containing only the paragraph element with 'Div C' written in it
+```
+
+#### .parent()
