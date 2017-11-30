@@ -7,3 +7,12 @@ jQuery is one of the (if not the) most popular JavaScript libraries for frontend
 ## Technical Overview
 
 JQL is built around a main function, `$l` (taking a cue from jQuery's ever-present dollar sign) which allows users to select elements on the page based on CSS selectors or by feeding HTML elements in directly and creates an array of them. This array is then passed into a custom-made `DOMNodeCollection` class, which is where the bulk of the work happens. The main functions of JQL are all methods of `DOMNodeCollection`.
+
+## API
+
+jQuery-Lite's API is roughly split into five parts:
+  - The Selector (mostly done)
+  - Editing
+  - Traversal (in development)
+  - Event Handling (in development)
+  - AJAX (in development)
