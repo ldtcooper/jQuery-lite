@@ -44,12 +44,16 @@ Example:
 
 **JQL Example**
 ```javascript
-  $l("li") // => DOMNodeCollection with all five list items
-  $l(".content") // => DOMNodeCollection containing the article.content and section.content elements
-  $("#lorem") // => DOMNodeCollection containing just the first list item
+  $l("li")
+  // => DOMNodeCollection with all five list items
+  $l(".content")
+  // => DOMNodeCollection containing the article.content and section.content elements
+  $("#lorem")
+  // => DOMNodeCollection containing just the first list item
 
-  // assume 'elem' is an HTMLElement representing <span>This is a span</span>
-  $(elem) // => DOMNodeCollection containing that single element
+  // assume 'elem' is an HTMLElement object
+  $(elem)
+  // => DOMNodeCollection containing that single element
 ```
 
 ### Editing
@@ -58,9 +62,28 @@ These methods let one edit the HTML inside of selected elements.
 #### .html()
 `.html()` acts as a getter method, and returns the `innerHTML` of the first element in its selector.
 
+
 `.html(string)` acts as a setter method, setting the `innerHMTL` of each element of the selection to the inputted string.
 
-Both getter and setter functionalities return the original function.
+Both getter and setter functionalities return the original selection.
+
+```html
+  <div>
+    <p>I'm a paragraph!</p>
+    <p><span>So am I!</span></p>
+  </div>
+```
+
+```javascript
+  $l("div").html()
+  // => "I'm a paragraph"
+  $l("p:nth-child(2)").html()
+  // => <span>So am I!</span>
+  $l("div").html("paragraph")
+  // turns both p elements into
+  // <p>paragraph</p>
+
+```
 
 #### .empty()
 `.empty` removes all `innerHTML` from the selected elements, leaving a pair of empty tags. It returns the original selection, albeit without content.
@@ -120,9 +143,11 @@ Example:
 
 **JQL**
 ```javascript
-  $l("#test").children() // => DOMNodeCollection containing the three divs with ids #a, #b, and #c
+  $l("#test").children()
+  // => DOMNodeCollection containing the three divs with ids #a, #b, and #c
 
-  $l("#c").children() // => DOMNodeCollection containing only the paragraph element with 'Div C' written in it
+  $l("#c").children()
+  // => DOMNodeCollection containing only the paragraph element with 'Div C' written in it
 ```
 
 #### .parent()
