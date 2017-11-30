@@ -16,3 +16,8 @@ jQuery-Lite's API is roughly split into five parts:
   - Traversal (in development)
   - Event Handling (in development)
   - AJAX (in development)
+
+### The Selector
+
+DOM elements can be selected with the JQL Selector `$l()`. It can take arguments in string form or in HTMLElement form, and returns a `DOMNodeCollection` object.
+If it receives a string, it will return a `DOMNodeCollection` of every DOM element that matches the CSS selector corresponding to that string. If fed an HTMLElement, it will return a `DOMNodeCollection` containing only that element.
