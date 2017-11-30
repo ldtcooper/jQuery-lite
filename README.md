@@ -128,7 +128,7 @@ Example:
 **HTML On Page:**
 
 ```html
-  <div id="test">
+  <body id="test">
     <div id="a">
       <p>Div A</p>
     </div>
@@ -138,7 +138,7 @@ Example:
     <div id="c">
       <p>Div C</p>
     </div>
-  </div>
+  </body>
 ```
 
 **JQL**
@@ -151,3 +151,17 @@ Example:
 ```
 
 #### .parent()
+`.parent()` takes no arguments and returns a unique DOMNodeCollection of the parent elements of each selected element.
+
+Example:
+
+Assume the same HTML as `.children()`.
+
+**JQL**
+```javascript
+  $l("p").parent()
+  // => DOMNodeCollection with the three divs with ids #a, #b, and #c
+
+  $l("div").parent()
+  // => DOMNodeCollection with just the div #test
+```
