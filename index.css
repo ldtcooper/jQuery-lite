@@ -1,3 +1,9 @@
+body {
+  margin: auto;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -6,7 +12,6 @@ header {
 
 header h1 {
   display: flex;
-  margin-left: 5%;
 }
 
 .button {
@@ -18,7 +23,7 @@ header h1 {
 
 .fa {
   color: black;
-  font-size: 24pt;
+  font-size: 20pt;
   margin-right: 15px;
 }
 
