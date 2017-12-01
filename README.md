@@ -107,6 +107,13 @@ Adds attributes onto selected elements and returns the original selection.
 
 `.attr(Object)` will assign many attributes to each element in the selection, with the keys being the attributes names and the values being the values.
 
+#### .removeAttr()
+Removes attributes from selected elements and returns the original selection.
+
+`.removeAttr(String)` will remove the named attribute from each element of the selection.
+
+`.removeAttr(Array)` will remove all of the attributes in the array from each element of the selection.
+
 #### .addClass()
 Adds classes to the selected elements and returns the original selection.
 
