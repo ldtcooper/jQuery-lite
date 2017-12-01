@@ -33,9 +33,9 @@
       <h2>What can I do with it?</h2>
       <p>Good question. With jQuery Lite, you can manipulate the elements on this very page! If you want to try this out, go ahead and open up your browser's console (find the shortcuts for different browsers here <a href="https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers">here</a>).</p>
       <p>When you get that up, type the following into the console:</p>
-      <p>$l("#instructions").attr("hidden", "false")</p>
+      <p>$l("#instructions").removeAttr("hidden")</p>
     </div>
-    <div class="content" id="instructions">
+    <div class="content" id="instructions" hidden>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </body>
