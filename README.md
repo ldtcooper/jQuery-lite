@@ -57,6 +57,8 @@ Example:
   // => DOMNodeCollection containing that single element
 ```
 
+The selector can also be passed functions that will be executed when the document loads (or right away, if the browser is already loaded.)
+
 ### Editing
 These methods let one edit the HTML inside of selected elements.
 
@@ -118,6 +120,13 @@ Removes classes from the selected elements and returns the original selection.
 `.removeClass(string)` takes the given string out of all the selected elements' class lists.
 
 `.removeClass(array)` removes all of the array's strings from the selection's class lists.
+
+#### .css()
+Adds CSS styling to the selected elements and returns the original selection.
+
+`.css(property, value)` will take two strings and set the CSS `property` of each selected element to `value`.
+
+`.css(object)` will take in an object where the keys are CSS properties and the values are their respective values.
 
 ### Traversal
 
