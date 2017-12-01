@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  margin-left: 5%;
+}
+
+.button {
+  display: flex;
+  margin-right: 5%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa {
+  color: black;
+  font-size: 24pt;
+  margin-right: 15px;
+}
+
+.fa:hover {
+  color: grey;
+}
