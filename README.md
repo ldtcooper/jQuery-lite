@@ -10,12 +10,13 @@ jQuery-Lite is built around a main function, `$l` (taking a cue from jQuery's ev
 
 ## API
 
-jQuery-Lite's API is roughly split into five parts:
-  - The Selector (mostly done)
+jQuery-Lite's API is roughly split into six parts:
+  - The Selector
   - Editing
-  - Traversal (in development)
-  - Event Handling (in development)
-  - AJAX (in development)
+  - Traversal
+  - Event Handling
+  - AJAX
+  - Utilities
 
 ### The Selector
 
